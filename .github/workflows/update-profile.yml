@@ -1,0 +1,58 @@
+name: Update profile
+
+on:
+  schedule:
+    - cron: "17 12 * * *"
+      timezone: "Etc/UTC"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "tools/profile/*.py"
+      - "tools/profile/icons.json"
+      - ".github/workflows/update-profile.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-profile
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install fonttools==4.62.1 brotli==1.2.0
+
+      - name: Fetch data
+        env:
+          PROFILE_TOKEN: ${{ secrets.PROFILE_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python tools/profile/fetch.py
+
+      - name: Render SVGs
+        run: python tools/profile/render.py
+
+      - name: Update README
+        run: python tools/profile/readme.py
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tools/profile/data assets README.md
+          if git diff --cached --quiet; then
+            echo "Nothing changed."
+          else
+            git commit -m "Refresh profile stats"
+            git push
+          fi

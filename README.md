@@ -7,6 +7,6 @@
 <img src="./assets/projects.svg" width="100%" align="top" alt="Projects">
 <a href="https://github.com/ma10-yt/AR-Writing"><img src="./assets/card-ar-writing.svg" width="50%" align="top" alt="AR Writing — an augmented-reality writing experiment."></a><a href="https://github.com/ma10-yt/ma10-portfolio"><img src="./assets/card-ma10-portfolio.svg" width="50%" align="top" alt="MA10 Portfolio — personal developer portfolio."></a>
 <a href="https://github.com/ma10-yt/friday"><img src="./assets/card-friday.svg" width="50%" align="top" alt="Friday — Python voice assistant."></a><a href="https://github.com/ma10-yt/ai-recipe-gen"><img src="./assets/card-ai-recipe-gen.svg" width="50%" align="top" alt="AI Recipe Generator — Streamlit AI recipe assistant."></a>
-<img src="./assets/stack.svg" width="100%" align="top" alt="Tech stack: Python, C, C++, JavaScript, NumPy, Pandas, Streamlit, React, Vite, HTML, CSS, Tailwind CSS, OpenRouter, Backboard, OpenAI, Supabase, Zod, Git, GitHub and GitHub Actions. Learning machine learning and AI/ML engineering.">
+<img src="./assets/stack.svg" width="100%" align="top" alt="Tech stack: Python, C, C++, JavaScript, NumPy, Pandas, Streamlit, React, Vite, HTML, CSS, OpenRouter, Backboard, OpenAI, Claude, Supabase, Git, GitHub and GitHub Actions. Learning machine learning and AI/ML engineering.">
 <img src="./assets/footer.svg" width="100%" align="top" alt="Connection closed.">
 </p>

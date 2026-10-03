@@ -33,7 +33,7 @@ text{font-family:'JBM',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font
 <text x="28" y="100" class="fg" style="font-size:13px">Personal developer portfolio with projects,</text>
 <text x="28" y="120" class="fg" style="font-size:13px">about, contact and a custom blog system</text>
 <text x="28" y="140" class="fg" style="font-size:13px">backed by Supabase.</text>
-<text x="28" y="170" class="dim" style="font-size:12px">React · Vite · Supabase</text>
+<text x="28" y="170" class="dim" style="font-size:12px">React Â· Vite Â· Supabase</text>
 <path transform="translate(342.8 158) scale(.55)" d="M10 0l2.9 6.6 7.1.6-5.4 4.7 1.6 7L10 15.2 3.8 18.9l1.6-7L0 7.2l7.1-.6z" fill="#e3b341"/>
 <text x="370" y="170" text-anchor="end" class="dim" style="font-size:12px">1</text>
 </g>

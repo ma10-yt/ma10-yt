@@ -47,7 +47,7 @@ text{font-family:'JBM',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font
 </g>
 <g class="ln" style="animation-delay:2.00s"><text class="fg" x="52" y="218"><tspan class="cy">&gt;&gt;</tspan> computer science student · aspiring AI/ML engineer</text></g>
 <g class="ln" style="animation-delay:2.25s"><text class="fg" x="52" y="242"><tspan class="cy">&gt;&gt;</tspan> Python · C++ · C · data and practical projects</text></g>
-<g class="ln" style="animation-delay:2.50s"><text class="fg" x="52" y="266"><tspan class="cy">&gt;&gt;</tspan> building projects while moving toward AI/ML<tspan class="cy" font-weight="700">AI/ML</tspan></text></g>
+<g class="ln" style="animation-delay:2.50s"><text class="fg" x="52" y="266"><tspan class="cy">&gt;&gt;</tspan> building projects while moving toward <tspan class="cy" font-weight="700">AI/ML</tspan></text></g>
 <g class="ln" style="animation-delay:2.8s">
 <text x="52" y="304" class="gr">$</text>
 <rect class="cursor" x="70" y="291" width="10" height="17" fill="#00d9ff"/>

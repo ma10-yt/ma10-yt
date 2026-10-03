@@ -1,32 +1,32 @@
 {
   "updated": "2026-10-03",
   "year": 2026,
-  "created_at": "2024-10-26T07:34:18Z",
+  "created_at": "2024-10-26T06:52:21Z",
   "stars": 3,
   "forks": 0,
-  "followers": 0,
+  "followers": 3,
   "repo_count": 5,
-  "commits_year": 0,
-  "commits_all": 0,
-  "prs": 0,
-  "prs_merged": 0,
-  "contributions_year": 0,
-  "contributions_all": 0,
-  "streak_current": 0,
-  "streak_longest": 0,
+  "commits_year": 33,
+  "commits_all": 36,
+  "prs": 2,
+  "prs_merged": 1,
+  "contributions_year": 39,
+  "contributions_all": 44,
+  "streak_current": 2,
+  "streak_longest": 3,
   "hackathon_wins": 0,
   "languages": {
-    "Python": 4,
-    "JavaScript": 2,
-    "C++": 1,
-    "C": 1
+    "JavaScript": 100933,
+    "Python": 69009,
+    "CSS": 62058,
+    "HTML": 472
   },
   "repo_stars": {
+    "ma10-yt": 0,
     "AR-Writing": 1,
     "ma10-portfolio": 1,
     "friday": 1,
-    "ai-recipe-gen": 0,
-    "ma10-yt": 0
+    "ai-recipe-gen": 0
   },
   "dev": {}
 }

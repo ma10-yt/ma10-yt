@@ -1,28 +1,32 @@
-"""Fetch fresh GitHub profile data into tools/profile/data/.
+"""Fetches fresh profile data from GitHub into data/stats.json and data/calendar.json (last 53 weeks of daily contributions).
 
-The workflow supplies GITHUB_TOKEN automatically. A PROFILE_TOKEN may be
-provided when broader/private contribution access is desired.
+Environment variables (all optional):
+  PROFILE_TOKEN  classic personal access token (repo + read:user). Lets commit, PR and
+                 streak numbers include private work. Falls back to GITHUB_TOKEN.
+  GITHUB_TOKEN   the token GitHub Actions provides automatically (public data only).
 
-Writing/blog data is intentionally not part of this profile.
+Each source is fetched independently. If one fails, its previous values are kept,
+so a flaky API never blanks out part of the profile.
 """
 import datetime
 import json
 import os
 import pathlib
 import sys
+import urllib.error
+import urllib.parse
 import urllib.request
 
 USER = "ma10-yt"
+HACKATHON_WINS = 0
 DATA = pathlib.Path(__file__).resolve().parent / "data"
 UA = "ma10-yt-profile-updater"
 
 
+# ─────────────────────────────── helpers ───────────────────────────────
 def http_json(url, *, headers=None, body=None, timeout=30):
-    req = urllib.request.Request(
-        url,
-        data=None if body is None else json.dumps(body).encode(),
-        headers={"User-Agent": UA, "Accept": "application/json", **(headers or {})},
-    )
+    req = urllib.request.Request(url, data=None if body is None else json.dumps(body).encode(),
+                                 headers={"User-Agent": UA, "Accept": "application/json", **(headers or {})})
     if body is not None:
         req.add_header("Content-Type", "application/json")
     with urllib.request.urlopen(req, timeout=timeout) as r:
@@ -30,13 +34,10 @@ def http_json(url, *, headers=None, body=None, timeout=30):
 
 
 def graphql(token, query, variables=None):
-    res = http_json(
-        "https://api.github.com/graphql",
-        headers={"Authorization": f"bearer {token}"},
-        body={"query": query, "variables": variables or {}},
-    )
+    res = http_json("https://api.github.com/graphql", headers={"Authorization": f"bearer {token}"},
+                    body={"query": query, "variables": variables or {}})
     if res.get("errors"):
-        raise RuntimeError("; ".join(e.get("message", "?") for e in res["errors"]))
+        raise RuntimeError("GraphQL error: " + "; ".join(e.get("message", "?") for e in res["errors"]))
     return res["data"]
 
 
@@ -53,10 +54,11 @@ def save(name, obj):
 
 
 def warn(msg):
-    print(f"::warning::{msg}" if os.environ.get("GITHUB_ACTIONS") else f"warning: {msg}",
-          file=sys.stderr)
+    # "::warning::" makes the message show up as an annotation on the Actions run page
+    print(f"::warning::{msg}" if os.environ.get("GITHUB_ACTIONS") else f"warning: {msg}", file=sys.stderr)
 
 
+# ─────────────────────────────── GitHub ────────────────────────────────
 PROFILE_QUERY = """
 query($login: String!) {
   user(login: $login) {
@@ -64,6 +66,7 @@ query($login: String!) {
     followers { totalCount }
     pullRequests { totalCount }
     merged: pullRequests(states: MERGED) { totalCount }
+    contributionsCollection { contributionYears }
     repositories(ownerAffiliations: OWNER, isFork: false, privacy: PUBLIC, first: 100) {
       nodes {
         name
@@ -72,10 +75,8 @@ query($login: String!) {
         languages(first: 20) { edges { size node { name } } }
       }
     }
-    contributionsCollection { contributionYears }
   }
-}
-"""
+}"""
 
 
 def years_query(years):
@@ -86,10 +87,11 @@ def years_query(years):
       totalCommitContributions
       contributionCalendar {{ totalContributions weeks {{ contributionDays {{ date contributionCount }} }} }}
     }}""")
-    return "query($login: String!) { user(login: $login) {" + "".join(parts) + "} }"
+    return "query($login: String!) {\n  user(login: $login) {" + "".join(parts) + "\n  }\n}"
 
 
 def streaks(days, today):
+    """days: {date: count}. Current streak may end yesterday if today has no contributions yet."""
     dates = sorted(d for d in days if d <= today)
     longest = run = 0
     for d in dates:
@@ -117,34 +119,29 @@ def fetch_github(token, today):
         for w in c["contributionCalendar"]["weeks"]:
             for day in w["contributionDays"]:
                 days[datetime.date.fromisoformat(day["date"])] = day["contributionCount"]
-
     current, longest = streaks(days, today)
-
+    # last 53 weeks, starting on a Sunday like GitHub's own graph (feeds the contribution city)
     start = today - datetime.timedelta(weeks=52)
     start -= datetime.timedelta(days=(start.weekday() + 1) % 7)
     calendar = [[d.isoformat(), days.get(d, 0)] for d in
-                (start + datetime.timedelta(days=i)
-                 for i in range((today - start).days + 1))]
+                (start + datetime.timedelta(days=i) for i in range((today - start).days + 1))]
 
     repos = u["repositories"]["nodes"]
     langs = {}
-    for repo in repos:
-        for edge in repo["languages"]["edges"]:
+    for r in repos:
+        for edge in r["languages"]["edges"]:
             langs[edge["node"]["name"]] = langs.get(edge["node"]["name"], 0) + edge["size"]
-
     cur = ydata.get(f"y{today.year}", {})
     this_year = cur.get("totalCommitContributions", 0)
     contribs_year = cur.get("contributionCalendar", {}).get("totalContributions", 0)
-
     return {
         "created_at": u["createdAt"],
         "followers": u["followers"]["totalCount"],
         "prs": u["pullRequests"]["totalCount"],
         "prs_merged": u["merged"]["totalCount"],
-        "stars": sum(repo["stargazerCount"] for repo in repos),
-        "forks": sum(repo["forkCount"] for repo in repos),
-        "repo_count": len(repos),
-        "repo_stars": {repo["name"]: repo["stargazerCount"] for repo in repos},
+        "stars": sum(r["stargazerCount"] for r in repos),
+        "forks": sum(r["forkCount"] for r in repos),
+        "repo_stars": {r["name"]: r["stargazerCount"] for r in repos},
         "languages": dict(sorted(langs.items(), key=lambda kv: -kv[1])),
         "year": today.year,
         "commits_year": this_year,
@@ -157,6 +154,7 @@ def fetch_github(token, today):
     }
 
 
+# ──────────────────────────────── main ─────────────────────────────────
 def main():
     today = datetime.datetime.now(datetime.timezone.utc).date()
     stats = load("stats.json", {})
@@ -169,11 +167,12 @@ def main():
         gh = fetch_github(token, today)
         save("calendar.json", gh.pop("_calendar"))
         stats.update(gh)
-        print("github: ok")
+        print("github: ok" + (" (with private contributions)" if os.environ.get("PROFILE_TOKEN") else " (public only)"))
     except Exception as ex:  # noqa: BLE001
         warn(f"GitHub fetch failed, keeping previous stats: {ex}")
         sys.exit(1)
 
+    stats["hackathon_wins"] = HACKATHON_WINS
     stats["updated"] = today.isoformat()
     save("stats.json", stats)
 

@@ -2,21 +2,21 @@ name: Update profile
 
 on:
   schedule:
-    - cron: "17 12 * * *"
-      timezone: "Etc/UTC"
-  workflow_dispatch:
+    - cron: "17 12 * * *"            # daily at 12:17 …
+      timezone: "America/New_York"    # … New York time (IANA zone name)
+  workflow_dispatch:         # "Run workflow" button on the Actions tab
   push:
     branches: [main]
-    paths:
+    paths:                   # re-render right away when the generator itself changes
       - "tools/profile/*.py"
       - "tools/profile/icons.json"
       - ".github/workflows/update-profile.yml"
 
 permissions:
-  contents: write
+  contents: write            # needed to commit the refreshed files
 
 concurrency:
-  group: update-profile
+  group: update-profile      # never run two updates at once
   cancel-in-progress: false
 
 jobs:
@@ -30,13 +30,14 @@ jobs:
         with:
           python-version: "3.12"
 
+      # pinned so the embedded fonts stay byte-identical between runs
       - name: Install dependencies
         run: pip install fonttools==4.62.1 brotli==1.2.0
 
       - name: Fetch data
         env:
-          PROFILE_TOKEN: ${{ secrets.PROFILE_TOKEN }}
-          GITHUB_TOKEN: ${{ github.token }}
+          PROFILE_TOKEN: ${{ secrets.PROFILE_TOKEN }}   # optional: adds private contributions
+          GITHUB_TOKEN: ${{ github.token }}             # fallback: public data only
         run: python tools/profile/fetch.py
 
       - name: Render SVGs

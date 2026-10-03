@@ -1,2 +1,5 @@
 __pycache__/
 *.pyc
+assets/writing.svg
+assets/writing/
+tools/profile/data/articles.json

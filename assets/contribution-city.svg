@@ -42,7 +42,7 @@ text{font-family:'JBM',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font
 <circle cx="790" cy="155" r="12.5" fill="#03040a"/>
 <g class="plane"><g transform="translate(0 132)"><rect x="0" y="0" width="14" height="2" rx="1" fill="#484f58"/><circle class="bl" cx="0" cy="1" r="1.6" fill="#ff7b72"/><circle class="bl" cx="14" cy="1" r="1.6" fill="#f0f6fc" style="animation-delay:.7s"/></g></g>
 <text x="828" y="300" text-anchor="end" class="dim" style="font-size:12px"><tspan class="cy" font-weight="700">0</tspan> contributions · last 365 days</text><text x="828" y="340" text-anchor="end" class="dim" style="font-size:12px">0 active days</text>
-<path d="M102.5,280.8L115.0,287.0L102.5,293.2L90.0,287.0Z" fill="#161b22" stroke="#0d1117" stroke-width=".6"/>
+<path d="M77.5,293.2L90.0,299.5L77.5,305.8L65.0,299.5Z" fill="#161b22" stroke="#0d1117" stroke-width=".6"/>
 <text x="52" y="652" class="dim" style="font-size:11px">quiet</text><rect x="104" y="642" width="11" height="11" fill="#161b22"/><rect x="120" y="642" width="11" height="11" fill="#0c2d6b"/><rect x="136" y="642" width="11" height="11" fill="#1554c0"/><rect x="152" y="642" width="11" height="11" fill="#2f81f7"/><rect x="168" y="642" width="11" height="11" fill="#1fd5ff"/><text x="190" y="652" class="dim" style="font-size:11px">skyscraper</text>
 <path d="M16 0V680M864 0V680" fill="none" stroke="#00d9ff" stroke-width="1.2"/>
 <g fill="none" stroke="#00d9ff" stroke-width="2"></g>

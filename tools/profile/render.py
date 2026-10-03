@@ -125,30 +125,25 @@ def up40(v):
 def build_header():
     bar_left, bar_right = "SYS://MA10 // NODE:AI-ML", "ONLINE · LEARNING MODE"
     name = "MA10"
-    lines = [
-        "computer science student · aspiring AI/ML engineer",
-        "Python / data / practical projects",
-        "building, learning, and experimenting",
-    ]
+    lines = ["software engineer · engineering manager", "10 years of C# / .NET, back-end at heart",
+             "building open-source tools under "]
     text = bar_left + bar_right + name + "$ whoami>>" + "".join(lines) + "AI/ML"
     h = 360
-    css = f'''@keyframes type{{from{{width:0}}}}
+    css = f"""@keyframes type{{from{{width:0}}}}
 @keyframes flicker{{0%{{opacity:0}}10%{{opacity:1}}14%{{opacity:.2}}22%{{opacity:1}}30%{{opacity:.4}}40%,100%{{opacity:1}}}}
 @keyframes gm{{0%,92%,100%{{transform:translate(0,0)}}93%{{transform:translate(5px,-1px)}}95%{{transform:translate(-3px,1px)}}97%{{transform:translate(2px,0)}}}}
 @keyframes gc{{0%,92%,100%{{transform:translate(0,0)}}93%{{transform:translate(-5px,1px)}}95%{{transform:translate(4px,-1px)}}97%{{transform:translate(-2px,0)}}}}
 .typing{{animation:type .7s steps(8) .3s both}}
 .name{{animation:flicker .9s linear 1.1s both}}
-.gm{{animation:gm 6s linear 2s infinite}}.gc{{animation:gc 6s linear 2s infinite}}'''
-    defs = f'''<pattern id="scan" width="4" height="3" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#000" fill-opacity=".2"/></pattern>
+.gm{{animation:gm 6s linear 2s infinite}}.gc{{animation:gc 6s linear 2s infinite}}"""
+    defs = f"""<pattern id="scan" width="4" height="3" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#000" fill-opacity=".2"/></pattern>
 <filter id="tglow" x="-5%" y="-40%" width="110%" height="180%"><feGaussianBlur stdDeviation="9"/></filter>
 <filter id="sglow" x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur stdDeviation="3"/></filter>
-<clipPath id="typeclip"><rect class="typing" x="{X}" y="80" width="140" height="30"/></clipPath>'''
+<clipPath id="typeclip"><rect class="typing" x="{X}" y="80" width="140" height="30"/></clipPath>"""
     dotx = FR - 20 - len(bar_right) * 8.2 - 16
-    rows = [
-        f'<text class="fg" x="{X}" y="{{y}}"><tspan class="cy">&gt;&gt;</tspan> {e(lines[0])}</text>',
-        f'<text class="fg" x="{X}" y="{{y}}"><tspan class="cy">&gt;&gt;</tspan> {e(lines[1])}</text>',
-        f'<text class="fg" x="{X}" y="{{y}}"><tspan class="cy">&gt;&gt;</tspan> {e(lines[2])}</text>',
-    ]
+    rows = [f'<text class="fg" x="{X}" y="{{y}}"><tspan class="cy">&gt;&gt;</tspan> {e(lines[0])}</text>',
+            f'<text class="fg" x="{X}" y="{{y}}"><tspan class="cy">&gt;&gt;</tspan> {e(lines[1])}</text>',
+            f'<text class="fg" x="{X}" y="{{y}}"><tspan class="cy">&gt;&gt;</tspan> {e(lines[2])}<tspan class="cy" font-weight="700">AI/ML</tspan></text>']
     desc_lines, _ = stagger(rows, 218, 24, delay0=1.75, step=0.25)
     body = f'''<rect x="{FL}" y="{M}" width="{FR-FL}" height="34" fill="{CYAN}" fill-opacity=".08"/>
 <line x1="{FL}" y1="{M+34}" x2="{FR}" y2="{M+34}" stroke="{CYAN}" stroke-opacity=".5"/>
@@ -170,11 +165,10 @@ def build_header():
 <rect class="cursor" x="{X+18}" y="291" width="10" height="17" fill="{CYAN}" filter="url(#sglow)"/>
 </g>
 <rect x="{FL}" y="{M+35}" width="{FR-FL}" height="{h-M-35}" fill="url(#scan)"/>'''
-    return slice_svg(
-        h, body, title="MA10",
-        desc="Computer science student, Python developer and aspiring AI/ML engineer.",
-        text=text, top=True, css=css, defs=defs, weights=(400, 700, 800)
-    )
+    return slice_svg(h, body, title="Giorgi Kobaidze",
+                     desc="Software engineer and engineering manager. 10 years of C# and .NET, back-end at heart. "
+                          "Building practical projects while moving toward AI/ML engineering.",
+                     text=text, top=True, css=css, defs=defs, weights=(400, 700, 800))
 
 
 # ─────────────────────────────── footer ───────────────────────────────
@@ -218,17 +212,17 @@ def half_slice(h, side, body, *, title, desc, text, weights=(400, 700)):
 
 PROJECTS = [
     dict(slug="ar-writing", name="AR Writing", url="https://github.com/ma10-yt/AR-Writing",
-         tag="AR EXPERIMENT", tagc=CYAN, stars=1, stack="Python · Augmented Reality",
-         desc="AR experiment that tracks hand movement and turns gestures into writing and commands."),
+         tag="AR EXPERIMENT", tagc=CYAN, stars=1, stack="Python · MediaPipe · OpenCV",
+         desc="An augmented-reality writing experiment that tracks hand movement and maps gestures to writing and commands."),
     dict(slug="ma10-portfolio", name="MA10 Portfolio", url="https://github.com/ma10-yt/ma10-portfolio",
          tag="LIVE PORTFOLIO", tagc=GREEN, stars=1, stack="React · Vite · Supabase",
-         desc="Personal portfolio and blog platform built with React, Vite and Supabase, with a custom content and admin system."),
+         desc="Personal developer portfolio with projects, about, contact and a custom blog system backed by Supabase."),
     dict(slug="friday", name="Friday", url="https://github.com/ma10-yt/friday",
          tag="VOICE ASSISTANT", tagc=MAGENTA, stars=1, stack="Python · SpeechRecognition · pyttsx3",
-         desc="Python voice assistant with wake-word detection, speech recognition, TTS, web search and API integrations."),
+         desc="A Python voice assistant with wake-word detection, speech recognition, text-to-speech, web search and API integrations."),
     dict(slug="ai-recipe-gen", name="AI Recipe Generator", url="https://github.com/ma10-yt/ai-recipe-gen",
-         tag="HACKTOBERFEST", tagc=MAGENTA, stars=0, stack="Python · Streamlit · Backboard",
-         desc="AI recipe assistant that accepts ingredients or photos, suggests recipes, and generates step-by-step instructions."),
+         tag="HACKTOBERFEST", tagc=MAGENTA, stars=0, stack="Python · Streamlit · OpenRouter",
+         desc="AI recipe assistant that uses ingredients or photos to suggest recipes and provide step-by-step instructions."),
 ]
 CARD_H = 200
 
@@ -316,7 +310,7 @@ def build_stats(d):
     ry, rh = ty + th + 16, 150
     lw = 300
     kv = [("followers", fmt(d["followers"])), ("forks", fmt(d["forks"])),
-          ("member since", f"{since:%b %Y} ({yrs}y)"), ("public repos", fmt(d.get("repo_count", "—")))]
+          ("member since", f"{since:%b %Y} ({yrs}y)"), ("public repos", fmt(d.get("repo_count", 0)))]
     rows = "\n".join(
         f'<text x="{X+16}" y="{ry+38+i*28}" xml:space="preserve"><tspan class="cy">{e(k)}</tspan><tspan class="dim">{"." * (16 - len(k))}</tspan> <tspan class="fg">{e(v)}</tspan></text>'
         for i, (k, v) in enumerate(kv))
@@ -365,22 +359,25 @@ def build_stats(d):
                 if "contributions_year" in d else f"{d['commits_year']} commits in {d['year']}, {d['commits_all']} all time")
     desc = (f"GitHub stats: {d['stars']} total stars; {activity}; "
             f"{d['prs']} pull requests ({d['prs_merged']} merged); current streak {d['streak_current']} days, longest {d['streak_longest']}; "
-            f"{d['followers']} followers; {d['forks']} forks; member since {since:%B %Y}; {d.get('repo_count', '—')} public repositories. "
+            f"{d['followers']} followers; {d['forks']} forks; member since {since:%B %Y}; {d.get('repo_count', 0)} public repositories. "
             "Top languages: " + ", ".join(f"{k} {p*100:.1f}%" for k, p in items) + "."
-            )
+           )
     return slice_svg(h, "\n".join(parts), title="Stats", desc=desc, text=html.unescape(text))
 
 
 # ─────────────────────────────── stack ────────────────────────────────
 STACK = [
     ("languages", ["Python", "C", "C++", "JavaScript"]),
-    ("data / math", ["NumPy", "Pandas"]),
+    ("data", ["NumPy", "Pandas"]),
     ("frameworks", ["Streamlit", "React", "Vite"]),
-    ("AI / APIs", ["OpenRouter", "Backboard"]),
-    ("platform", ["Supabase", "GitHub Actions"]),
-    ("tools", ["Git", "GitHub"]),
+    ("web", ["HTML", "CSS", "Tailwind CSS"]),
+    ("AI / APIs", ["OpenRouter", "Backboard", "OpenAI"]),
+    ("backend", ["Supabase", "Zod"]),
+    ("tools", ["Git", "GitHub", "GitHub Actions"]),
     ("learning", ["Machine Learning", "AI/ML Engineering"]),
 ]
+
+
 def build_stack():
     parts = [heading(44, "stack", "// 05"),
              f'<g class="ln" style="animation-delay:.15s"><text x="{X}" y="96" class="dim"><tspan class="gr">$</tspan> scan --loadout --top-level</text></g>']
@@ -405,7 +402,7 @@ def build_stack():
     return slice_svg(h, "\n".join(parts), title="Tech stack", desc=desc, text=text)
 
 
-# ──────────────────────────────── links
+
 # ──────────────────────────────── links ───────────────────────────────
 LINKS = [
     ("linkedin", "LinkedIn", "in/ma10-yt", "https://www.linkedin.com/in/ma10-yt/"),
@@ -413,7 +410,7 @@ LINKS = [
 ]
 ICONS = json.load(open(HERE / "icons.json"))
 SEG = W // len(LINKS)
-BTN_W, BTN_GAP = 220, 0
+BTN_W, BTN_GAP = 180, 22
 
 
 def icon_markup(key, x, y, size=18):
@@ -421,24 +418,24 @@ def icon_markup(key, x, y, size=18):
         return (f'<rect x="{x}" y="{y}" width="{size}" height="{size}" rx="3" fill="{CYAN}"/>'
                 f'<text x="{x + size/2}" y="{y + size - 4.5}" text-anchor="middle" font-weight="700" fill="#03040a" style="font-size:12px">in</text>')
     if key == "website":
-        return (f'<circle cx="{x + size/2}" cy="{y + size/2}" r="{size/2 - 1}" fill="none" stroke="{CYAN}" stroke-width="1.7"/>'
-                f'<path d="M{x+2} {y+size/2}H{x+size-2}M{x+size/2} {y+2}V{y+size-2}" stroke="{CYAN}" stroke-width="1.4"/>'
-                f'<path d="M{x+4} {y+4}Q{x+size/2} {y+size/2} {x+4} {y+size-4}M{x+size-4} {y+4}Q{x+size/2} {y+size/2} {x+size-4} {y+size-4}" fill="none" stroke="{CYAN}" stroke-width="1.1"/>')
+        return (f'<circle cx="{x + size/2}" cy="{y + size/2}" r="{size/2 - 1}" fill="none" stroke="{CYAN}" stroke-width="1.6"/>'
+                f'<path d="M{x+2} {y+size/2}H{x+size-2}M{x+size/2} {y+2}V{y+size-2}" stroke="{CYAN}" stroke-width="1.3"/>'
+                f'<path d="M{x+4} {y+4}Q{x+size/2} {y+size/2} {x+4} {y+size-4}M{x+size-4} {y+4}Q{x+size/2} {y+size/2} {x+size-4} {y+size-4}" fill="none" stroke="{CYAN}" stroke-width="1"/>')
     d = ICONS[key]
     return f'<path transform="translate({x} {y}) scale({size/24})" d="{d}" fill="{CYAN}"/>'
 
 
 def build_links_head():
     body = heading(44, "links", "// 01") + f'''
-<g class="ln" style="animation-delay:.15s"><text x="{X}" y="96" class="dim"><tspan class="gr">$</tspan> ping ma10-yt --all-channels</text></g>'''
-    return slice_svg(120, body, title="Links", desc="Where to find me", text="~/links// 01$ ping ma10-yt --all-channels")
+<g class="ln" style="animation-delay:.15s"><text x="{X}" y="96" class="dim"><tspan class="gr">$</tspan> ping ma10-yt --channels</text></g>'''
+    return slice_svg(120, body, title="Links", desc="Where to find me", text="~/links// 01$ ping ma10-yt --channels")
 
 
 def build_link_button(k):
     key, label, handle, url = LINKS[k]
     h = 80
     x0 = SEG * k                       # this slice's position inside the full-width row
-    lx = (SEG - BTN_W) / 2
+    lx = X + k * (BTN_W + BTN_GAP) - x0
     first, last = k == 0, k == len(LINKS) - 1
     bg0 = FL - x0 if first else 0
     bg1 = FR - x0 if last else SEG
@@ -620,7 +617,7 @@ def main():
     global OUT
     import argparse
     ap = argparse.ArgumentParser(description="Render the profile SVGs from data/*.json.")
-    ap.add_argument("--data", type=pathlib.Path, default=DATA, help="folder with stats.json and articles.json")
+    ap.add_argument("--data", type=pathlib.Path, default=DATA, help="folder with profile data")
     ap.add_argument("--out", type=pathlib.Path, default=OUT, help="folder to write the SVGs into")
     args = ap.parse_args()
     OUT = args.out

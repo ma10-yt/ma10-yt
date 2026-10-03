@@ -33,7 +33,7 @@ text{font-family:'JBM',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font
 <text x="70" y="100" class="fg" style="font-size:13px">A Python voice assistant with wake-word</text>
 <text x="70" y="120" class="fg" style="font-size:13px">detection, speech recognition, text-to-</text>
 <text x="70" y="140" class="fg" style="font-size:13px">speech, web search and API integrations.</text>
-<text x="70" y="170" class="dim" style="font-size:12px">Python Â· SpeechRecognition Â· pyttsx3</text>
+<text x="70" y="170" class="dim" style="font-size:12px">Python · SpeechRecognition · pyttsx3</text>
 <path transform="translate(384.8 158) scale(.55)" d="M10 0l2.9 6.6 7.1.6-5.4 4.7 1.6 7L10 15.2 3.8 18.9l1.6-7L0 7.2l7.1-.6z" fill="#e3b341"/>
 <text x="412" y="170" text-anchor="end" class="dim" style="font-size:12px">1</text>
 </g>

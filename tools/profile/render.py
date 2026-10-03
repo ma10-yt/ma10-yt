@@ -447,13 +447,16 @@ def build_link_button(k):
     by, bh, cut = 12, 56, 12
     box = f"M{lx} {by}H{lx+BTN_W-cut}L{lx+BTN_W} {by+cut}V{by+bh}H{lx}Z"
     text = label + handle + "in"
+    group_width = 18 + 10 + len(label) * 7.8
+    icon_x = lx + (BTN_W - group_width) / 2
+    label_x = icon_x + 28
     body = f'''<g class="ln" style="animation-delay:{.25 + k*.08:.2f}s">
 <path d="{box}" fill="{CYAN}" fill-opacity=".05"/>
 <path d="{box}" fill="none" stroke="{CYAN}" stroke-opacity=".55"/>
 <path d="M{lx+BTN_W-cut} {by}L{lx+BTN_W} {by+cut}" stroke="{CYAN}" stroke-width="2"/>
-<g filter="url(#g)" opacity=".5">{icon_markup(key, lx + (BTN_W - 18) / 2, by + 19)}</g>
-{icon_markup(key, lx + (BTN_W - 18) / 2, by + 19)}
-<text x="{lx+38}" y="{by+33}" font-weight="700" class="cy" style="font-size:13px">{e(label)}</text>
+<g filter="url(#g)" opacity=".5">{icon_markup(key, icon_x, by + 19)}</g>
+{icon_markup(key, icon_x, by + 19)}
+<text x="{label_x}" y="{by+33}" font-weight="700" class="cy" style="font-size:13px">{e(label)}</text>
 </g>'''
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{SEG}" height="{h}" viewBox="0 0 {SEG} {h}" role="img" aria-labelledby="t d">
 <title id="t">{e(label)}</title>

@@ -25,9 +25,15 @@ text{font-family:'JBM',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font
 <path d="M130.0 12H298.0L310.0 24V68H130.0Z" fill="#00d9ff" fill-opacity=".05"/>
 <path d="M130.0 12H298.0L310.0 24V68H130.0Z" fill="none" stroke="#00d9ff" stroke-opacity=".55"/>
 <path d="M298.0 12L310.0 24" stroke="#00d9ff" stroke-width="2"/>
+<<<<<<< HEAD
 <g filter="url(#g)" opacity=".5"><rect x="211.0" y="31" width="18" height="18" rx="3" fill="#00d9ff"/><text x="220.0" y="44.5" text-anchor="middle" font-weight="700" fill="#03040a" style="font-size:12px">in</text></g>
 <rect x="211.0" y="31" width="18" height="18" rx="3" fill="#00d9ff"/><text x="220.0" y="44.5" text-anchor="middle" font-weight="700" fill="#03040a" style="font-size:12px">in</text>
 <text x="168.0" y="45" font-weight="700" class="cy" style="font-size:13px">LinkedIn</text>
+=======
+<g filter="url(#g)" opacity=".5"><rect x="174.8" y="31" width="18" height="18" rx="3" fill="#00d9ff"/><text x="183.8" y="44.5" text-anchor="middle" font-weight="700" fill="#03040a" style="font-size:12px">in</text></g>
+<rect x="174.8" y="31" width="18" height="18" rx="3" fill="#00d9ff"/><text x="183.8" y="44.5" text-anchor="middle" font-weight="700" fill="#03040a" style="font-size:12px">in</text>
+<text x="202.8" y="45" font-weight="700" class="cy" style="font-size:13px">LinkedIn</text>
+>>>>>>> 8ae4755 (Refine profile links)
 </g>
 <path d="M16 0V80" fill="none" stroke="#00d9ff" stroke-width="1.2"/>
 </svg>

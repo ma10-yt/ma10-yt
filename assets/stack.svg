@@ -32,7 +32,7 @@ text{font-family:'JBM',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font
 <g class="ln" style="animation-delay:.15s"><text x="52" y="96" class="dim"><tspan class="gr">$</tspan> scan --loadout --top-level</text></g>
 <g class="ln" style="animation-delay:0.25s">
 <text x="52" y="146" class="dim" style="font-size:13px">languages</text>
-<text x="156" y="146" class="cy" style="font-size:13px">â€º</text>
+<text x="156" y="146" class="cy" style="font-size:13px">›</text>
 <rect x="176.0" y="126" width="72.8" height="30" fill="#00d9ff" fill-opacity=".06" stroke="#00d9ff" stroke-opacity=".55"/>
 <path d="M176.0 134V126H184.0" fill="none" stroke="#00d9ff" stroke-width="2"/>
 <text x="189.0" y="146" font-weight="700" class="cy" style="font-size:13px">Python</text>
@@ -48,7 +48,7 @@ text{font-family:'JBM',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font
 </g>
 <g class="ln" style="animation-delay:0.35s">
 <text x="52" y="190" class="dim" style="font-size:13px">data</text>
-<text x="156" y="190" class="cy" style="font-size:13px">â€º</text>
+<text x="156" y="190" class="cy" style="font-size:13px">›</text>
 <rect x="176.0" y="170" width="65.0" height="30" fill="#00d9ff" fill-opacity=".06" stroke="#00d9ff" stroke-opacity=".55"/>
 <path d="M176.0 178V170H184.0" fill="none" stroke="#00d9ff" stroke-width="2"/>
 <text x="189.0" y="190" font-weight="700" class="cy" style="font-size:13px">NumPy</text>
@@ -58,7 +58,7 @@ text{font-family:'JBM',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font
 </g>
 <g class="ln" style="animation-delay:0.45s">
 <text x="52" y="234" class="dim" style="font-size:13px">frameworks</text>
-<text x="156" y="234" class="cy" style="font-size:13px">â€º</text>
+<text x="156" y="234" class="cy" style="font-size:13px">›</text>
 <rect x="176.0" y="214" width="96.2" height="30" fill="#00d9ff" fill-opacity=".06" stroke="#00d9ff" stroke-opacity=".55"/>
 <path d="M176.0 222V214H184.0" fill="none" stroke="#00d9ff" stroke-width="2"/>
 <text x="189.0" y="234" font-weight="700" class="cy" style="font-size:13px">Streamlit</text>
@@ -71,7 +71,7 @@ text{font-family:'JBM',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font
 </g>
 <g class="ln" style="animation-delay:0.55s">
 <text x="52" y="278" class="dim" style="font-size:13px">web</text>
-<text x="156" y="278" class="cy" style="font-size:13px">â€º</text>
+<text x="156" y="278" class="cy" style="font-size:13px">›</text>
 <rect x="176.0" y="258" width="57.2" height="30" fill="#00d9ff" fill-opacity=".06" stroke="#00d9ff" stroke-opacity=".55"/>
 <path d="M176.0 266V258H184.0" fill="none" stroke="#00d9ff" stroke-width="2"/>
 <text x="189.0" y="278" font-weight="700" class="cy" style="font-size:13px">HTML</text>
@@ -81,7 +81,7 @@ text{font-family:'JBM',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font
 </g>
 <g class="ln" style="animation-delay:0.65s">
 <text x="52" y="322" class="dim" style="font-size:13px">AI / APIs</text>
-<text x="156" y="322" class="cy" style="font-size:13px">â€º</text>
+<text x="156" y="322" class="cy" style="font-size:13px">›</text>
 <rect x="176.0" y="302" width="104.0" height="30" fill="#00d9ff" fill-opacity=".06" stroke="#00d9ff" stroke-opacity=".55"/>
 <path d="M176.0 310V302H184.0" fill="none" stroke="#00d9ff" stroke-width="2"/>
 <text x="189.0" y="322" font-weight="700" class="cy" style="font-size:13px">OpenRouter</text>
@@ -97,14 +97,14 @@ text{font-family:'JBM',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font
 </g>
 <g class="ln" style="animation-delay:0.75s">
 <text x="52" y="366" class="dim" style="font-size:13px">backend</text>
-<text x="156" y="366" class="cy" style="font-size:13px">â€º</text>
+<text x="156" y="366" class="cy" style="font-size:13px">›</text>
 <rect x="176.0" y="346" width="88.4" height="30" fill="#00d9ff" fill-opacity=".06" stroke="#00d9ff" stroke-opacity=".55"/>
 <path d="M176.0 354V346H184.0" fill="none" stroke="#00d9ff" stroke-width="2"/>
 <text x="189.0" y="366" font-weight="700" class="cy" style="font-size:13px">Supabase</text>
 </g>
 <g class="ln" style="animation-delay:0.85s">
 <text x="52" y="410" class="dim" style="font-size:13px">tools</text>
-<text x="156" y="410" class="cy" style="font-size:13px">â€º</text>
+<text x="156" y="410" class="cy" style="font-size:13px">›</text>
 <rect x="176.0" y="390" width="49.4" height="30" fill="#00d9ff" fill-opacity=".06" stroke="#00d9ff" stroke-opacity=".55"/>
 <path d="M176.0 398V390H184.0" fill="none" stroke="#00d9ff" stroke-width="2"/>
 <text x="189.0" y="410" font-weight="700" class="cy" style="font-size:13px">Git</text>
@@ -117,7 +117,7 @@ text{font-family:'JBM',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font
 </g>
 <g class="ln" style="animation-delay:0.95s">
 <text x="52" y="454" class="dim" style="font-size:13px">learning</text>
-<text x="156" y="454" class="cy" style="font-size:13px">â€º</text>
+<text x="156" y="454" class="cy" style="font-size:13px">›</text>
 <rect x="176.0" y="434" width="150.8" height="30" fill="#00d9ff" fill-opacity=".06" stroke="#00d9ff" stroke-opacity=".55"/>
 <path d="M176.0 442V434H184.0" fill="none" stroke="#00d9ff" stroke-width="2"/>
 <text x="189.0" y="454" font-weight="700" class="cy" style="font-size:13px">Machine Learning</text>

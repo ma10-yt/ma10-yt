@@ -22,13 +22,13 @@ text{font-family:'JBM',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font
 <rect x="0" y="0" width="424" height="80" fill="#03040a"/>
 <rect x="0" y="0" width="424" height="80" fill="url(#grid)"/>
 <g class="ln" style="animation-delay:0.33s">
-<path d="M-186 12H-18L-6 24V68H-186Z" fill="#00d9ff" fill-opacity=".05"/>
-<path d="M-186 12H-18L-6 24V68H-186Z" fill="none" stroke="#00d9ff" stroke-opacity=".55"/>
-<path d="M-18 12L-6 24" stroke="#00d9ff" stroke-width="2"/>
-<g filter="url(#g)" opacity=".5"><circle cx="-165.0" cy="32.0" r="8.0" fill="none" stroke="#00d9ff" stroke-width="1.6"/><path d="M-172 32.0H-158M-165.0 25V39" stroke="#00d9ff" stroke-width="1.3"/><path d="M-170 27Q-165.0 32.0 -170 37M-160 27Q-165.0 32.0 -160 37" fill="none" stroke="#00d9ff" stroke-width="1"/></g>
-<circle cx="-165.0" cy="32.0" r="8.0" fill="none" stroke="#00d9ff" stroke-width="1.6"/><path d="M-172 32.0H-158M-165.0 25V39" stroke="#00d9ff" stroke-width="1.3"/><path d="M-170 27Q-165.0 32.0 -170 37M-160 27Q-165.0 32.0 -160 37" fill="none" stroke="#00d9ff" stroke-width="1"/>
-<text x="-148" y="37" font-weight="700" class="cy" style="font-size:13px">Website</text>
-<text x="-174" y="58" class="dim" style="font-size:10px">ma10-yt.github.io/ma10-portfolio</text>
+<path d="M130.0 12H298.0L310.0 24V68H130.0Z" fill="#00d9ff" fill-opacity=".05"/>
+<path d="M130.0 12H298.0L310.0 24V68H130.0Z" fill="none" stroke="#00d9ff" stroke-opacity=".55"/>
+<path d="M298.0 12L310.0 24" stroke="#00d9ff" stroke-width="2"/>
+<g filter="url(#g)" opacity=".5"><circle cx="151.0" cy="32.0" r="8.0" fill="none" stroke="#00d9ff" stroke-width="1.6"/><path d="M144.0 32.0H158.0M151.0 25V39" stroke="#00d9ff" stroke-width="1.3"/><path d="M146.0 27Q151.0 32.0 146.0 37M156.0 27Q151.0 32.0 156.0 37" fill="none" stroke="#00d9ff" stroke-width="1"/></g>
+<circle cx="151.0" cy="32.0" r="8.0" fill="none" stroke="#00d9ff" stroke-width="1.6"/><path d="M144.0 32.0H158.0M151.0 25V39" stroke="#00d9ff" stroke-width="1.3"/><path d="M146.0 27Q151.0 32.0 146.0 37M156.0 27Q151.0 32.0 156.0 37" fill="none" stroke="#00d9ff" stroke-width="1"/>
+<text x="168.0" y="37" font-weight="700" class="cy" style="font-size:13px">Website</text>
+<text x="142.0" y="58" class="dim" style="font-size:10px">ma10-yt.github.io/ma10-portfolio</text>
 </g>
 <path d="M424 0V80" fill="none" stroke="#00d9ff" stroke-width="1.2"/>
 </svg>

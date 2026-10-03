@@ -124,9 +124,12 @@ def up40(v):
 # ─────────────────────────────── header ───────────────────────────────
 def build_header():
     bar_left, bar_right = "SYS://MA10 // NODE:AI-ML", "ONLINE · LEARNING MODE"
-    name = "MA10"
-    lines = ["software engineer · engineering manager", "10 years of C# / .NET, back-end at heart",
-             "building open-source tools under "]
+    name = "MEHRAN"
+    lines = [
+    "computer science student · aspiring AI/ML engineer",
+    "Python · C++ · C · data and practical projects",
+    "building projects while moving toward AI/ML"
+]
     text = bar_left + bar_right + name + "$ whoami>>" + "".join(lines) + "AI/ML"
     h = 360
     css = f"""@keyframes type{{from{{width:0}}}}
@@ -367,12 +370,12 @@ def build_stats(d):
 
 # ─────────────────────────────── stack ────────────────────────────────
 STACK = [
-    ("languages", ["Python", "C", "C++", "JavaScript"]),
+    ("languages", ["Python", "C++", "C", "JavaScript"]),
     ("data", ["NumPy", "Pandas"]),
     ("frameworks", ["Streamlit", "React", "Vite"]),
-    ("web", ["HTML", "CSS", "Tailwind CSS"]),
-    ("AI / APIs", ["OpenRouter", "Backboard", "OpenAI"]),
-    ("backend", ["Supabase", "Zod"]),
+    ("web", ["HTML", "CSS"]),
+    ("AI / APIs", ["OpenRouter", "Backboard", "OpenAI", "Claude"]),
+    ("backend", ["Supabase"]),
     ("tools", ["Git", "GitHub", "GitHub Actions"]),
     ("learning", ["Machine Learning", "AI/ML Engineering"]),
 ]
@@ -435,7 +438,7 @@ def build_link_button(k):
     key, label, handle, url = LINKS[k]
     h = 80
     x0 = SEG * k                       # this slice's position inside the full-width row
-    lx = X + k * (BTN_W + BTN_GAP) - x0
+    lx = (SEG - BTN_W) / 2
     first, last = k == 0, k == len(LINKS) - 1
     bg0 = FL - x0 if first else 0
     bg1 = FR - x0 if last else SEG

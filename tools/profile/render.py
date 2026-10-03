@@ -128,7 +128,7 @@ def build_header():
     lines = [
     "computer science student · aspiring AI/ML engineer",
     "Python · C++ · C · data and practical projects",
-    "building projects while moving toward AI/ML"
+    "building projects while moving toward "
 ]
     text = bar_left + bar_right + name + "$ whoami>>" + "".join(lines) + "AI/ML"
     h = 360
@@ -451,10 +451,8 @@ def build_link_button(k):
 <path d="{box}" fill="{CYAN}" fill-opacity=".05"/>
 <path d="{box}" fill="none" stroke="{CYAN}" stroke-opacity=".55"/>
 <path d="M{lx+BTN_W-cut} {by}L{lx+BTN_W} {by+cut}" stroke="{CYAN}" stroke-width="2"/>
-<g filter="url(#g)" opacity=".5">{icon_markup(key, lx+12, by+11)}</g>
-{icon_markup(key, lx+12, by+11)}
-<text x="{lx+38}" y="{by+25}" font-weight="700" class="cy" style="font-size:13px">{e(label)}</text>
-<text x="{lx+12}" y="{by+46}" class="dim" style="font-size:10px">{e(handle)}</text>
+<g filter="url(#g)" opacity=".5">{icon_markup(key, lx + (BTN_W - 18) / 2, by + 19)}</g>
+{icon_markup(key, lx + (BTN_W - 18) / 2, by + 19)}
 </g>'''
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{SEG}" height="{h}" viewBox="0 0 {SEG} {h}" role="img" aria-labelledby="t d">
 <title id="t">{e(label)}</title>

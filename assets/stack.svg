@@ -1,8 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="175" viewBox="0 0 1200 175">
-  <rect width="100%" height="100%" rx="24" fill="#0d1117"/>
-  
-  <text x="60" y="55" fill="#f0f6fc" font-family="Arial, sans-serif" font-size="30" font-weight="700">TECH STACK</text>
-  <text x="60" y="100" fill="#8b949e" font-family="Arial, sans-serif" font-size="21">Python • NumPy • Pandas • Streamlit • Git • GitHub</text>
-  <text x="60" y="140" fill="#8b949e" font-family="Arial, sans-serif" font-size="21">Currently learning: Machine Learning • AI/ML engineering</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="250" viewBox="0 0 1400 250">
+<defs>
+<linearGradient id="neon" x1="0" x2="1"><stop offset="0" stop-color="#00f5ff"/><stop offset=".48" stop-color="#7a5cff"/><stop offset="1" stop-color="#ff2bd6"/></linearGradient>
+<linearGradient id="pink" x1="0" x2="1"><stop offset="0" stop-color="#ff2bd6"/><stop offset="1" stop-color="#ff7a18"/></linearGradient>
+<linearGradient id="cyan" x1="0" x2="1"><stop offset="0" stop-color="#00f5ff"/><stop offset="1" stop-color="#24ff8f"/></linearGradient>
+<filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="soft"><feGaussianBlur stdDeviation="12"/></filter>
+<pattern id="grid" width="50" height="28" patternUnits="userSpaceOnUse"><path d="M50 0H0V28" fill="none" stroke="#35216d" stroke-width="1"/></pattern>
+</defs>
+<rect width="1400" height="250" rx="28" fill="#07030f"/>
+
+<rect x="34" y="34" width="1332" height="182" rx="20" fill="#0d0818" stroke="#35216d"/>
+<text x="64" y="68" fill="#7f74a8" font-family="monospace" font-size="14" letter-spacing="4">06 // LOADOUT</text>
+<text x="64" y="108" fill="#fff" font-family="monospace" font-size="24" font-weight="700">PYTHON</text>
+<text x="215" y="108" fill="#00f5ff" font-family="monospace" font-size="20">NUMPY</text>
+<text x="335" y="108" fill="#ff2bd6" font-family="monospace" font-size="20">PANDAS</text>
+<text x="465" y="108" fill="#7a5cff" font-family="monospace" font-size="20">STREAMLIT</text>
+<text x="635" y="108" fill="#24ff8f" font-family="monospace" font-size="20">GIT</text>
+<text x="715" y="108" fill="#fff" font-family="monospace" font-size="20">GITHUB</text>
+<text x="64" y="151" fill="#9f96c5" font-family="monospace" font-size="18">NEXT TARGET:</text>
+<text x="235" y="151" fill="url(#neon)" font-family="monospace" font-size="20" font-weight="700">MACHINE LEARNING  /  AI ENGINEERING</text>
+<path d="M64 183 H1330" stroke="url(#neon)" stroke-width="2" opacity=".55"/>
 
 </svg>

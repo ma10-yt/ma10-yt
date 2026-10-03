@@ -1,14 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="180" viewBox="0 0 1200 180">
-  <rect width="100%" height="100%" rx="24" fill="#0d1117"/>
-  
-  <defs>
-    <linearGradient id="g" x1="0" x2="1">
-      <stop offset="0" stop-color="#58a6ff"/>
-      <stop offset="1" stop-color="#a371f7"/>
-    </linearGradient>
-  </defs>
-  <text x="60" y="78" fill="#f0f6fc" font-family="Arial, sans-serif" font-size="52" font-weight="700">MA10</text>
-  <text x="62" y="122" fill="url(#g)" font-family="Arial, sans-serif" font-size="27">Computer Science Student • Python • AI/ML</text>
-  <line x1="60" y1="145" x2="1140" y2="145" stroke="#30363d" stroke-width="2"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="310" viewBox="0 0 1400 310">
+<defs>
+<linearGradient id="neon" x1="0" x2="1"><stop offset="0" stop-color="#00f5ff"/><stop offset=".48" stop-color="#7a5cff"/><stop offset="1" stop-color="#ff2bd6"/></linearGradient>
+<linearGradient id="pink" x1="0" x2="1"><stop offset="0" stop-color="#ff2bd6"/><stop offset="1" stop-color="#ff7a18"/></linearGradient>
+<linearGradient id="cyan" x1="0" x2="1"><stop offset="0" stop-color="#00f5ff"/><stop offset="1" stop-color="#24ff8f"/></linearGradient>
+<filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="soft"><feGaussianBlur stdDeviation="12"/></filter>
+<pattern id="grid" width="50" height="28" patternUnits="userSpaceOnUse"><path d="M50 0H0V28" fill="none" stroke="#35216d" stroke-width="1"/></pattern>
+</defs>
+<rect width="1400" height="310" rx="28" fill="#07030f"/>
+
+<rect x="24" y="24" width="1352" height="262" rx="24" fill="url(#grid)" opacity=".65"/>
+<path d="M70 245 H1330" stroke="url(#neon)" stroke-width="2" opacity=".7" filter="url(#glow)"/>
+<path d="M160 245 L390 82 L575 205 L800 52 L1010 191 L1240 95" fill="none" stroke="#ff2bd6" stroke-width="2" opacity=".34"/>
+<circle cx="1120" cy="82" r="78" fill="none" stroke="#00f5ff" stroke-width="2" opacity=".28"/>
+<circle cx="1120" cy="82" r="54" fill="none" stroke="#7a5cff" stroke-width="2" opacity=".24"/>
+<text x="80" y="108" fill="#8ef8ff" font-family="monospace" font-size="22" letter-spacing="5">SYSTEM ONLINE // PROFILE NODE 10</text>
+<text x="78" y="174" fill="#fff" font-family="Arial, sans-serif" font-size="66" font-weight="800" letter-spacing="2">MA10</text>
+<text x="82" y="222" fill="url(#neon)" font-family="monospace" font-size="26" letter-spacing="1">COMPUTER SCIENCE STUDENT  •  PYTHON  •  AI/ML</text>
+<text x="1090" y="104" text-anchor="middle" fill="#00f5ff" font-family="monospace" font-size="17">BUILD</text>
+<text x="1090" y="128" text-anchor="middle" fill="#fff" font-family="monospace" font-size="25" font-weight="700">LEARN</text>
+<text x="1090" y="153" text-anchor="middle" fill="#ff2bd6" font-family="monospace" font-size="17">REPEAT</text>
+<text x="80" y="265" fill="#7f74a8" font-family="monospace" font-size="16">KASHMIR // INDIA // STATUS: LEARNING MODE</text>
 
 </svg>

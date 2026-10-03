@@ -1,22 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="215" viewBox="0 0 1200 215">
-  <rect width="100%" height="100%" rx="24" fill="#0d1117"/>
-  
-  <text x="60" y="45" fill="#8b949e" font-family="Arial, sans-serif" font-size="18">CONTRIBUTION CITY</text>
-  <g transform="translate(70,70)">
-    <rect x="0" y="65" width="90" height="45" fill="#21262d"/>
-    <rect x="110" y="35" width="110" height="75" fill="#238636"/>
-    <rect x="240" y="50" width="75" height="60" fill="#58a6ff"/>
-    <rect x="335" y="20" width="120" height="90" fill="#8957e5"/>
-    <rect x="475" y="45" width="95" height="65" fill="#f85149"/>
-    <rect x="590" y="30" width="150" height="80" fill="#238636"/>
-    <rect x="760" y="55" width="80" height="55" fill="#58a6ff"/>
-    <path d="M0 111 H850" stroke="#30363d" stroke-width="4"/>
-    <circle cx="45" cy="65" r="7" fill="#f0f6fc"/>
-    <circle cx="162" cy="35" r="7" fill="#f0f6fc"/>
-    <circle cx="279" cy="50" r="7" fill="#f0f6fc"/>
-    <circle cx="395" cy="20" r="7" fill="#f0f6fc"/>
-    <circle cx="520" cy="45" r="7" fill="#f0f6fc"/>
-    <circle cx="650" cy="30" r="7" fill="#f0f6fc"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="340" viewBox="0 0 1400 340">
+<defs>
+<linearGradient id="neon" x1="0" x2="1"><stop offset="0" stop-color="#00f5ff"/><stop offset=".48" stop-color="#7a5cff"/><stop offset="1" stop-color="#ff2bd6"/></linearGradient>
+<linearGradient id="pink" x1="0" x2="1"><stop offset="0" stop-color="#ff2bd6"/><stop offset="1" stop-color="#ff7a18"/></linearGradient>
+<linearGradient id="cyan" x1="0" x2="1"><stop offset="0" stop-color="#00f5ff"/><stop offset="1" stop-color="#24ff8f"/></linearGradient>
+<filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="soft"><feGaussianBlur stdDeviation="12"/></filter>
+<pattern id="grid" width="50" height="28" patternUnits="userSpaceOnUse"><path d="M50 0H0V28" fill="none" stroke="#35216d" stroke-width="1"/></pattern>
+</defs>
+<rect width="1400" height="340" rx="28" fill="#07030f"/>
+
+<rect x="34" y="34" width="1332" height="270" rx="20" fill="url(#grid)" opacity=".52"/>
+<text x="64" y="68" fill="#7f74a8" font-family="monospace" font-size="14" letter-spacing="4">05 // CONTRIBUTION CITY</text>
+<text x="64" y="101" fill="#fff" font-family="monospace" font-size="27" font-weight="700">NIGHT SHIFT // BUILDING THE STACK</text>
+<g transform="translate(82,125)">
+  <path d="M0 153 L90 75 L165 143 L270 42 L366 137 L470 66 L578 142 L680 49 L780 138 L905 76 L1005 145 L1120 35 L1220 150" fill="none" stroke="#00f5ff" stroke-width="2" opacity=".5"/>
+  <path d="M0 153 H1220" stroke="url(#neon)" stroke-width="4" filter="url(#glow)"/>
+  <g fill="#110b21" stroke="#7a5cff" stroke-width="2">
+    <path d="M25 153V92L73 61L121 92V153Z"/>
+    <path d="M145 153V116L185 87L225 116V153Z"/>
+    <path d="M250 153V71L302 39L354 71V153Z"/>
+    <path d="M382 153V99L430 64L478 99V153Z"/>
+    <path d="M500 153V80L550 46L600 80V153Z"/>
+    <path d="M632 153V109L675 77L718 109V153Z"/>
+    <path d="M754 153V73L810 35L866 73V153Z"/>
+    <path d="M900 153V94L952 60L1004 94V153Z"/>
+    <path d="M1032 153V55L1083 20L1134 55V153Z"/>
+    <path d="M1155 153V104L1191 82L1220 104V153Z"/>
   </g>
+  <g fill="#ff2bd6" opacity=".95">
+    <rect x="47" y="109" width="7" height="7"/><rect x="72" y="97" width="7" height="7"/>
+    <rect x="276" y="86" width="7" height="7"/><rect x="321" y="62" width="7" height="7"/>
+    <rect x="524" y="98" width="7" height="7"/><rect x="550" y="88" width="7" height="7"/>
+    <rect x="780" y="88" width="7" height="7"/><rect x="813" y="63" width="7" height="7"/>
+    <rect x="1060" y="75" width="7" height="7"/><rect x="1092" y="58" width="7" height="7"/>
+  </g>
+  <g fill="#00f5ff">
+    <circle cx="8" cy="153" r="4"/><circle cx="1220" cy="153" r="4"/><circle cx="302" cy="39" r="4"/><circle cx="1083" cy="20" r="4"/>
+  </g>
+</g>
 
 </svg>

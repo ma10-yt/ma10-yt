@@ -35,7 +35,7 @@ text{font-family:'JBM',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font
 <rect x="16" y="16" width="848" height="34" fill="#00d9ff" fill-opacity=".08"/>
 <line x1="16" y1="50" x2="864" y2="50" stroke="#00d9ff" stroke-opacity=".5"/>
 <text x="32" y="38" letter-spacing="1" class="cy" style="font-size:12px">SYS://MA10 // NODE:AI-ML</text>
-<text x="844" y="38" letter-spacing="1" class="dim" text-anchor="end" style="font-size:12px">ONLINE · LEARNING MODE</text>
+<text x="844" y="38" letter-spacing="1" class="dim" text-anchor="end" style="font-size:12px">ONLINE Â· LEARNING MODE</text>
 <circle class="dot" cx="647.6" cy="34" r="4" fill="#3fb950"/>
 <circle class="dot" cx="647.6" cy="34" r="4" fill="#3fb950" filter="url(#sglow)"/>
 <g clip-path="url(#typeclip)"><text x="52" y="102" class="dim"><tspan class="gr">$</tspan> whoami</text></g>
@@ -45,8 +45,8 @@ text{font-family:'JBM',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font
 <g class="gc"><text x="49" y="172" fill="#00d9ff" opacity=".85" style="font-size:56px">MEHRAN</text></g>
 <text x="52" y="172" fill="#f0fbff" style="font-size:56px">MEHRAN</text>
 </g>
-<g class="ln" style="animation-delay:2.00s"><text class="fg" x="52" y="218"><tspan class="cy">&gt;&gt;</tspan> computer science student · aspiring AI/ML engineer</text></g>
-<g class="ln" style="animation-delay:2.25s"><text class="fg" x="52" y="242"><tspan class="cy">&gt;&gt;</tspan> Python · C++ · C · data and practical projects</text></g>
+<g class="ln" style="animation-delay:2.00s"><text class="fg" x="52" y="218"><tspan class="cy">&gt;&gt;</tspan> computer science student Â· aspiring AI/ML engineer</text></g>
+<g class="ln" style="animation-delay:2.25s"><text class="fg" x="52" y="242"><tspan class="cy">&gt;&gt;</tspan> Python Â· C++ Â· C Â· data and practical projects</text></g>
 <g class="ln" style="animation-delay:2.50s"><text class="fg" x="52" y="266"><tspan class="cy">&gt;&gt;</tspan> building projects while moving toward AI/ML<tspan class="cy" font-weight="700">AI/ML</tspan></text></g>
 <g class="ln" style="animation-delay:2.8s">
 <text x="52" y="304" class="gr">$</text>

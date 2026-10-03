@@ -22,13 +22,13 @@ text{font-family:'JBM',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font
 <rect x="16" y="0" width="424" height="80" fill="#03040a"/>
 <rect x="16" y="0" width="424" height="80" fill="url(#grid)"/>
 <g class="ln" style="animation-delay:0.25s">
-<path d="M52 12H220L232 24V68H52Z" fill="#00d9ff" fill-opacity=".05"/>
-<path d="M52 12H220L232 24V68H52Z" fill="none" stroke="#00d9ff" stroke-opacity=".55"/>
-<path d="M220 12L232 24" stroke="#00d9ff" stroke-width="2"/>
-<g filter="url(#g)" opacity=".5"><rect x="64" y="23" width="18" height="18" rx="3" fill="#00d9ff"/><text x="73.0" y="36.5" text-anchor="middle" font-weight="700" fill="#03040a" style="font-size:12px">in</text></g>
-<rect x="64" y="23" width="18" height="18" rx="3" fill="#00d9ff"/><text x="73.0" y="36.5" text-anchor="middle" font-weight="700" fill="#03040a" style="font-size:12px">in</text>
-<text x="90" y="37" font-weight="700" class="cy" style="font-size:13px">LinkedIn</text>
-<text x="64" y="58" class="dim" style="font-size:10px">in/ma10-yt</text>
+<path d="M130.0 12H298.0L310.0 24V68H130.0Z" fill="#00d9ff" fill-opacity=".05"/>
+<path d="M130.0 12H298.0L310.0 24V68H130.0Z" fill="none" stroke="#00d9ff" stroke-opacity=".55"/>
+<path d="M298.0 12L310.0 24" stroke="#00d9ff" stroke-width="2"/>
+<g filter="url(#g)" opacity=".5"><rect x="142.0" y="23" width="18" height="18" rx="3" fill="#00d9ff"/><text x="151.0" y="36.5" text-anchor="middle" font-weight="700" fill="#03040a" style="font-size:12px">in</text></g>
+<rect x="142.0" y="23" width="18" height="18" rx="3" fill="#00d9ff"/><text x="151.0" y="36.5" text-anchor="middle" font-weight="700" fill="#03040a" style="font-size:12px">in</text>
+<text x="168.0" y="37" font-weight="700" class="cy" style="font-size:13px">LinkedIn</text>
+<text x="142.0" y="58" class="dim" style="font-size:10px">in/ma10-yt</text>
 </g>
 <path d="M16 0V80" fill="none" stroke="#00d9ff" stroke-width="1.2"/>
 </svg>

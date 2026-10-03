@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="215" viewBox="0 0 1200 215">
+  <rect width="100%" height="100%" rx="24" fill="#0d1117"/>
+  
+  <text x="60" y="45" fill="#8b949e" font-family="Arial, sans-serif" font-size="18">CONTRIBUTION CITY</text>
+  <g transform="translate(70,70)">
+    <rect x="0" y="65" width="90" height="45" fill="#21262d"/>
+    <rect x="110" y="35" width="110" height="75" fill="#238636"/>
+    <rect x="240" y="50" width="75" height="60" fill="#58a6ff"/>
+    <rect x="335" y="20" width="120" height="90" fill="#8957e5"/>
+    <rect x="475" y="45" width="95" height="65" fill="#f85149"/>
+    <rect x="590" y="30" width="150" height="80" fill="#238636"/>
+    <rect x="760" y="55" width="80" height="55" fill="#58a6ff"/>
+    <path d="M0 111 H850" stroke="#30363d" stroke-width="4"/>
+    <circle cx="45" cy="65" r="7" fill="#f0f6fc"/>
+    <circle cx="162" cy="35" r="7" fill="#f0f6fc"/>
+    <circle cx="279" cy="50" r="7" fill="#f0f6fc"/>
+    <circle cx="395" cy="20" r="7" fill="#f0f6fc"/>
+    <circle cx="520" cy="45" r="7" fill="#f0f6fc"/>
+    <circle cx="650" cy="30" r="7" fill="#f0f6fc"/>
+  </g>
+
+</svg>

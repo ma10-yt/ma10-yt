@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="175" viewBox="0 0 1200 175">
+  <rect width="100%" height="100%" rx="24" fill="#0d1117"/>
+  
+  <text x="60" y="55" fill="#f0f6fc" font-family="Arial, sans-serif" font-size="30" font-weight="700">TECH STACK</text>
+  <text x="60" y="100" fill="#8b949e" font-family="Arial, sans-serif" font-size="21">Python • NumPy • Pandas • Streamlit • Git • GitHub</text>
+  <text x="60" y="140" fill="#8b949e" font-family="Arial, sans-serif" font-size="21">Currently learning: Machine Learning • AI/ML engineering</text>
+
+</svg>

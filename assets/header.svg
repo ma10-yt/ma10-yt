@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="180" viewBox="0 0 1200 180">
+  <rect width="100%" height="100%" rx="24" fill="#0d1117"/>
+  
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#58a6ff"/>
+      <stop offset="1" stop-color="#a371f7"/>
+    </linearGradient>
+  </defs>
+  <text x="60" y="78" fill="#f0f6fc" font-family="Arial, sans-serif" font-size="52" font-weight="700">MA10</text>
+  <text x="62" y="122" fill="url(#g)" font-family="Arial, sans-serif" font-size="27">Computer Science Student • Python • AI/ML</text>
+  <line x1="60" y1="145" x2="1140" y2="145" stroke="#30363d" stroke-width="2"/>
+
+</svg>
